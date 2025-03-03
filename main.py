@@ -14,10 +14,10 @@ blink_time = 1
 led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT
 
-# runs loop turning LED on for set time and off for 1 second
+# runs loop turning LED on for set time and off for set time, increases every cycle
 while True:
     led.value = True
     time.sleep(blink_time)
     led.value = False
-    time.sleep(1)
+    time.sleep(blink_time)
     blink_time += 1
